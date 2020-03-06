@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>js 基础代码(面试，平时都可以用)🚀 | jrNote</title>
+    <meta name="description" content="jr 笔记">
+    <link rel="icon" href="/jrNoteWebsite/favicon.ico">
+    
+    <link rel="preload" href="/jrNoteWebsite/assets/css/styles.ef52c15a.css" as="style"><link rel="preload" href="/jrNoteWebsite/assets/js/app.ef52c15a.js" as="script"><link rel="preload" href="/jrNoteWebsite/assets/js/46.cf3e199e.js" as="script"><link rel="prefetch" href="/jrNoteWebsite/assets/css/1.styles.37672f4d.css"><link rel="prefetch" href="/jrNoteWebsite/assets/css/2.styles.56896ed6.css"><link rel="prefetch" href="/jrNoteWebsite/assets/css/3.styles.1e5b2a95.css"><link rel="prefetch" href="/jrNoteWebsite/assets/js/1.37672f4d.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/10.54d0b29b.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/11.507a45cf.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/12.9e788ba2.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/13.a4818e9d.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/14.227214e1.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/15.ddd3f6d7.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/16.279f83ed.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/17.2eeeaf73.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/18.cae9aa9d.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/19.106f0fae.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/2.56896ed6.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/20.94270539.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/21.18fb325d.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/22.60a98c3b.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/23.f0ae317a.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/24.e7900943.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/25.ed4e597b.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/26.46848f48.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/27.1cd75e6a.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/28.60882150.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/29.14caa5b4.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/3.1e5b2a95.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/30.5241ca98.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/31.923877bb.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/32.15c5b3d1.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/33.1cb52141.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/34.dda96f50.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/35.e7449be2.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/36.ceec2b74.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/37.59028316.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/38.5bb0eef8.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/39.357dec72.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/4.d15d075d.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/40.3b2545ff.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/41.3ec558a7.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/42.9be120e8.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/43.27e584be.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/44.85fab7e3.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/45.f005e7d1.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/47.c33c5d66.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/48.1950445a.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/49.9929c7ea.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/5.f43ba467.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/50.e971cff8.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/51.27e59759.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/52.ef08a3c4.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/53.1fe88173.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/54.ecbcad41.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/55.c3d6deb4.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/56.6444e7e5.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/57.267d1ea3.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/58.79ae0eaa.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/59.8626850a.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/6.fb92c824.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/60.c40719a3.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/61.6b280eb8.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/62.99c63958.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/63.a325df46.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/64.9bf05a8f.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/65.ebee5489.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/66.04574448.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/67.de1d3124.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/68.b5719589.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/69.e92c9009.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/7.006cc73e.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/8.5013f130.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/9.e717d895.js">
+    <link rel="stylesheet" href="/jrNoteWebsite/assets/css/1.styles.37672f4d.css"><link rel="stylesheet" href="/jrNoteWebsite/assets/css/2.styles.56896ed6.css"><link rel="stylesheet" href="/jrNoteWebsite/assets/css/3.styles.1e5b2a95.css"><link rel="stylesheet" href="/jrNoteWebsite/assets/css/styles.ef52c15a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/jrNoteWebsite/" class="home-link router-link-active"><!----> <span class="site-name">jrNote</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/jrNoteWebsite/" class="nav-link">首页</a></div><div class="nav-item"><a href="/jrNoteWebsite/docs/" class="nav-link">储物柜</a></div><div class="nav-item"><a href="/jrNoteWebsite/frontend/" class="nav-link">复习</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/jrNoteWebsite/goal/goalList.html" class="nav-link">目标清单</a></li><li class="dropdown-item"><!----> <a href="/jrNoteWebsite/more/js/" class="nav-link">js知识</a></li><li class="dropdown-item"><!----> <a href="/jrNoteWebsite/goal/todoList.html" class="nav-link">todoList</a></li></ul></div></div><div class="nav-item"><a href="/jrNoteWebsite/about/" class="nav-link">关于</a></div><div class="nav-item"><a href="https://github.com/5201314999/jrNote" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/jrNoteWebsite/" class="nav-link">首页</a></div><div class="nav-item"><a href="/jrNoteWebsite/docs/" class="nav-link">储物柜</a></div><div class="nav-item"><a href="/jrNoteWebsite/frontend/" class="nav-link">复习</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/jrNoteWebsite/goal/goalList.html" class="nav-link">目标清单</a></li><li class="dropdown-item"><!----> <a href="/jrNoteWebsite/more/js/" class="nav-link">js知识</a></li><li class="dropdown-item"><!----> <a href="/jrNoteWebsite/goal/todoList.html" class="nav-link">todoList</a></li></ul></div></div><div class="nav-item"><a href="/jrNoteWebsite/about/" class="nav-link">关于</a></div><div class="nav-item"><a href="https://github.com/5201314999/jrNote" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/jrNoteWebsite/main/2git.html" class="sidebar-link">git 使用总结</a></li><li><a href="/jrNoteWebsite/main/1startKoa.html" class="sidebar-link">Koa2</a></li><li><a href="/jrNoteWebsite/main/7koaRouter.html" class="sidebar-link">koa-router路由中间件</a></li><li><a href="/jrNoteWebsite/main/8koaQuery.html" class="sidebar-link">koa 请求参数接收</a></li><li><a href="/jrNoteWebsite/main/9koaCookiesAndSession.html" class="sidebar-link">koa2 cookies，session</a></li><li><a href="/jrNoteWebsite/main/14koaMysql.html" class="sidebar-link">koa 连接数据库</a></li><li><a href="/jrNoteWebsite/main/3question.html" class="sidebar-link">问题集</a></li><li><a href="/jrNoteWebsite/main/4amazing.html" class="sidebar-link">前端细节优化积累</a></li><li><a href="/jrNoteWebsite/main/5wepy.html" class="sidebar-link">微信小程序开发入门笔记</a></li><li><a href="/jrNoteWebsite/main/6business.html" class="sidebar-link">后台系统业务总结</a></li><li><a href="/jrNoteWebsite/main/10architecture.html" class="sidebar-link">技术上，开发协作问题</a></li><li><a href="/jrNoteWebsite/main/11idea.html" class="sidebar-link">独立思考</a></li><li><a href="/jrNoteWebsite/main/12basicCss.html" class="sidebar-link">mycss note</a></li><li><a href="/jrNoteWebsite/main/15jscod.html" class="active sidebar-link">js 基础代码(面试，平时都可以用)🚀</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/jrNoteWebsite/main/15jscod.html#输出时间差" class="sidebar-link">输出时间差</a></li><li class="sidebar-sub-header"><a href="/jrNoteWebsite/main/15jscod.html#dom-有意思知识点" class="sidebar-link">dom 有意思知识点</a></li><li class="sidebar-sub-header"><a href="/jrNoteWebsite/main/15jscod.html#ajax-xmlhttprequest-和-fetch" class="sidebar-link">ajax XMLHttpRequest 和 fetch</a></li><li class="sidebar-sub-header"><a href="/jrNoteWebsite/main/15jscod.html#移动端touch事件监听" class="sidebar-link">移动端touch事件监听</a></li><li class="sidebar-sub-header"><a href="/jrNoteWebsite/main/15jscod.html#如何-访问dom-中的data" class="sidebar-link">如何 访问dom 中的data</a></li><li class="sidebar-sub-header"><a href="/jrNoteWebsite/main/15jscod.html#new-模拟实现" class="sidebar-link">new 模拟实现</a></li><li class="sidebar-sub-header"><a href="/jrNoteWebsite/main/15jscod.html#前端读取图片（todo）" class="sidebar-link">前端读取图片（todo）</a></li><li class="sidebar-sub-header"><a href="/jrNoteWebsite/main/15jscod.html#object-defineproperty" class="sidebar-link">Object.defineProperty</a></li><li class="sidebar-sub-header"><a href="/jrNoteWebsite/main/15jscod.html#学习vue-源码，-总结的一些东西-obj-的工具函数" class="sidebar-link">学习vue 源码， 总结的一些东西 obj 的工具函数</a></li><li class="sidebar-sub-header"><a href="/jrNoteWebsite/main/15jscod.html#构造函数是否使用new-来建立的检验，2种方法" class="sidebar-link">构造函数是否使用new 来建立的检验，2种方法</a></li><li class="sidebar-sub-header"><a href="/jrNoteWebsite/main/15jscod.html#数组语法-this-的指向" class="sidebar-link">数组语法 this 的指向</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/jrNoteWebsite/main/15jscod.html#判断一个url-是否合法" class="sidebar-link">判断一个url 是否合法</a></li><li class="sidebar-sub-header"><a href="/jrNoteWebsite/main/15jscod.html#基础递归" class="sidebar-link">基础递归</a></li><li class="sidebar-sub-header"><a href="/jrNoteWebsite/main/15jscod.html#模块重定向" class="sidebar-link">模块重定向</a></li><li class="sidebar-sub-header"><a href="/jrNoteWebsite/main/15jscod.html#substr-官方建议使用substring（1，n）-替代" class="sidebar-link">substr 官方建议使用substring（1，n） 替代</a></li><li class="sidebar-sub-header"><a href="/jrNoteWebsite/main/15jscod.html#performance-里的数据" class="sidebar-link">performance 里的数据</a></li></ul></li></ul></li><li><a href="/jrNoteWebsite/main/16graphicDevelop.html" class="sidebar-link">可视化开发</a></li><li><a href="/jrNoteWebsite/main/172019i.html" class="sidebar-link">2019</a></li><li><a href="/jrNoteWebsite/main/18interview.html" class="sidebar-link">面试系列2</a></li><li><a href="/jrNoteWebsite/main/19webrtc.html" class="sidebar-link">webrtc</a></li></ul> </div> <div class="page"> <div class="content"><h1 id="js-基础代码-面试，平时都可以用"><a href="#js-基础代码-面试，平时都可以用" aria-hidden="true" class="header-anchor">#</a> js 基础代码(面试，平时都可以用)🚀</h1> <h2 id="输出时间差"><a href="#输出时间差" aria-hidden="true" class="header-anchor">#</a> 输出时间差</h2> <div class="language- extra-class"><pre class="language-text"><code>console.time('测试');
+console.timeEnd('测试);
+
+//2
+performance.mark('start')
+setTimeout(()=&gt;{
+    performance.mark('end')
+    performance.measure('performance cost','start','end')
+    console.log(performance.getEntriesByName('performance cost')[0].duration)
+},2000)
+
+</code></pre></div><h2 id="dom-有意思知识点"><a href="#dom-有意思知识点" aria-hidden="true" class="header-anchor">#</a> dom 有意思知识点</h2> <p>创建和插入新元素，删除现有元素以及修改其属性。</p> <div class="language- extra-class"><pre class="language-text"><code>var newNode=event.target.cloneNode(true);
+
+dom.className='a';
+
+dom.classList.add()/dom.classList.remove()
+
+dom.getAttribute()  dom.setAttribute()
+
+dom.style.borderWidth/['border-width']  包含px  计算后的属性用 getComputedStyle().getPropertyValue()
+
+DOMContentLoaded/onload/
+
+宽高：offsetWidth offsetHeight 必须在dom 有才行，height 、width 不直接设置无法正确获取
+
+dom.outerHTML()
+
+document.createTextNode   document.createComment
+
+console.group('测试1')
+cosnole.groupEnd()
+
+dom.children  dom.childNodes 
+
+</code></pre></div><h2 id="ajax-xmlhttprequest-和-fetch"><a href="#ajax-xmlhttprequest-和-fetch" aria-hidden="true" class="header-anchor">#</a> ajax XMLHttpRequest 和 fetch</h2> <div class="language- extra-class"><pre class="language-text"><code>    //XMLHttpRequest 原生实现ajax
+    function getJSON(url){
+        return new Promise((resolve,reject)=&gt;{
+            const request=new XMLHttpRequest();
+            request.open('GET',url);
+            request.onload=function(){
+                    if(this.status===200){
+                        resolve(JSON.parse(this.response));
+                    }
+                    else{
+                        reject(this.status + '  '+this.statusText);
+                    }
+            },
+            request.onerror=()=&gt;{
+                reject(this.status+' '+this.statusText);
+            }
+            request.send();
+        });
+    }
+
+    getJSON('./ajaxtest.json').then(res=&gt;{
+       alert(JSON.stringify(res));
+    }).catch(e=&gt;{
+        console.log('异常');
+        console.log(e);
+    })
+
+    fetch(url,param).then(response=&gt;response.json())
+</code></pre></div><h2 id="移动端touch事件监听"><a href="#移动端touch事件监听" aria-hidden="true" class="header-anchor">#</a> 移动端touch事件监听</h2> <p>touchstart,touchmove,touchend ,有个注意事项，从一个box 滑入另一个box 是，target 是不会改变的，始终是touchstart 元素，解决方案是通过elmentFromPoint</p> <h2 id="如何-访问dom-中的data"><a href="#如何-访问dom-中的data" aria-hidden="true" class="header-anchor">#</a> 如何 访问dom 中的data</h2> <div class="language- extra-class"><pre class="language-text"><code>TMLElement.dataset[&quot;arr&quot;] ) 
+</code></pre></div><h2 id="new-模拟实现"><a href="#new-模拟实现" aria-hidden="true" class="header-anchor">#</a> new 模拟实现</h2> <div class="language- extra-class"><pre class="language-text"><code>  Con = [].shift.call(arguments); arguments 删除第一个同时赋给Con
+
+  var args = Array.prototype.slice.apply(arguments);　
+    //方案1
+    function create(){
+        const  obj=new Object();
+        const Constructor=[].shift.call(arguments);
+        obj.__proto__=Constructor
+        const ret=Constructor.apply(obj,arguments);
+        return ret instanceof Object?ret:obj;
+    }
+
+    //方案2
+    function create(fn,...args){
+        const obj=Object.create(fn.prototype)
+        const ret=fn.call(obj,...args)
+        return ret instanceof Object?ret:obj 
+    }
+
+</code></pre></div><h2 id="前端读取图片（todo）"><a href="#前端读取图片（todo）" aria-hidden="true" class="header-anchor">#</a> 前端读取图片（todo）</h2> <div class="language- extra-class"><pre class="language-text"><code></code></pre></div><h2 id="object-defineproperty"><a href="#object-defineproperty" aria-hidden="true" class="header-anchor">#</a> Object.defineProperty</h2> <p>Object.defineProperty writable 和 set 不能一起用,可以实现只读属性，configurable，value</p> <div class="language- extra-class"><pre class="language-text"><code>   Object.defineProperty(obj,'name',{
+          // writable:true,
+          get:()=&gt;{
+            return 'jr'
+          }
+        })
+        console.log(obj.name)
+        obj.name=122
+        console.log(obj.name)
+</code></pre></div><h2 id="学习vue-源码，-总结的一些东西-obj-的工具函数"><a href="#学习vue-源码，-总结的一些东西-obj-的工具函数" aria-hidden="true" class="header-anchor">#</a> 学习vue 源码， 总结的一些东西 obj 的工具函数</h2> <div class="language- extra-class"><pre class="language-text"><code>//严格检查
+ const _toString=Object.prototype.toString
+isPureObject(obj){
+    return _toString.call(obj)==='[object Object]'
+}
+
+isTrue(obj){
+    return obj===true
+}
+
+isRegExp(v){
+    return _toString.call(v)==='[object RegExp]'
+}
+
+isFunction(func){
+    return typeof func==='function'
+}
+
+
+!!a   a 为undefined 返回false
+isFunction(func){
+    return Object.prototype.call(func)==='[object Function]'
+}
+
+//对某些数组原型方法做改造，不污染全部数组的原型。
+const arrayPro=Array.prototype
+var arrMethods=Object.create(arrayPro)
+
+['push'].forEach(method=&gt;{
+    arrMethods[method]=function(){
+        //避免闭包泄漏
+        let i=arguments.length;
+        const args=new Array(i)
+        while(i--){
+            args[i]=arguments[i]
+        }
+        arrayPro.call(this,args)
+        //做些额外的操作
+    }
+})
+
+// 创建一个{}，原型上没东西的
+
+const c=Object.create(null)
+
+</code></pre></div><h2 id="构造函数是否使用new-来建立的检验，2种方法"><a href="#构造函数是否使用new-来建立的检验，2种方法" aria-hidden="true" class="header-anchor">#</a> 构造函数是否使用new 来建立的检验，2种方法</h2> <div class="language- extra-class"><pre class="language-text"><code>    Vue(){
+        
+        if(this instanceof Vue){
+
+        }
+        else{
+            throw new Error('必须使用new 创建')
+        }
+        
+        //方法2：
+        if(new.target===Vue){
+
+        }
+        else{
+            throw new Error('必须使用new 创建')
+        }
+    }
+</code></pre></div><h2 id="数组语法-this-的指向"><a href="#数组语法-this-的指向" aria-hidden="true" class="header-anchor">#</a> 数组语法 this 的指向</h2> <p><a href="http://es6.ruanyifeng.com/#docs/array#%E6%95%B0%E7%BB%84%E5%AE%9E%E4%BE%8B%E7%9A%84-includes" target="_blank" rel="noopener noreferrer">http://es6.ruanyifeng.com/#docs/array#%E6%95%B0%E7%BB%84%E5%AE%9E%E4%BE%8B%E7%9A%84-includes<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <div class="language- extra-class"><pre class="language-text"><code>//容易影响全局，可以拷贝一份出来用
+Array.prototype.unique=function(){
+    return [...new Set(this)]
+}
+</code></pre></div><p>衍生问题： 将一个嵌套数组扁平化，去重，递增顺序 arr.toString() 也能去扁平化</p> <div class="language- extra-class"><pre class="language-text"><code>    [...new Set(arr.flat(Infinity))].sort((a,b)=&gt;return a-b)
+</code></pre></div><h3 id="判断一个url-是否合法"><a href="#判断一个url-是否合法" aria-hidden="true" class="header-anchor">#</a> 判断一个url 是否合法</h3> <div class="language- extra-class"><pre class="language-text"><code>isUrl(url){
+    try{
+        const item=new URL(url)
+        console.log(item)
+        return true
+    }catch(e){
+        return false
+    }
+}
+</code></pre></div><h3 id="基础递归"><a href="#基础递归" aria-hidden="true" class="header-anchor">#</a> 基础递归</h3> <p>第 88 题：实现 convert 方法，把原始 list 转换成树形结构，要求尽可能降低时间复杂度</p> <div class="language- extra-class"><pre class="language-text"><code>    
+</code></pre></div><h3 id="模块重定向"><a href="#模块重定向" aria-hidden="true" class="header-anchor">#</a> 模块重定向</h3> <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/export" target="_blank" rel="noopener noreferrer">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/export<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <div class="language- extra-class"><pre class="language-text"><code>import App from App.vue
+export default App 
+
+
+export * from App.vue （导出所有模块）
+export {moduleA as default} from '.../' (重命名为默认模块)
+export {default} from App.vue （导出默认模块）
+</code></pre></div><h3 id="substr-官方建议使用substring（1，n）-替代"><a href="#substr-官方建议使用substring（1，n）-替代" aria-hidden="true" class="header-anchor">#</a> substr 官方建议使用substring（1，n） 替代</h3> <h3 id="performance-里的数据"><a href="#performance-里的数据" aria-hidden="true" class="header-anchor">#</a> performance 里的数据</h3> <p>可以获取到DNS 解析时间，TCP 连接时间，首屏渲染时间，dom 完成时间，页面load 完时间</p> <div class="language- extra-class"><pre class="language-text"><code>    let timing = performance.timing,
+    start = timing.navigationStart,
+    dnsTime = 0,
+    tcpTime = 0,
+    firstPaintTime = 0,
+    domRenderTime = 0,
+    loadTime = 0;
+
+dnsTime = timing.domainLookupEnd - timing.domainLookupStart;
+tcpTime = timing.connectEnd - timing.connectStart;
+firstPaintTime = timing.responseStart - start;
+domRenderTime = timing.domContentLoadedEventEnd - start;
+loadTime = timing.loadEventEnd - start;
+
+console.log('DNS解析时间:', dnsTime, 
+            '\nTCP建立时间:', tcpTime, 
+            '\n首屏时间:', firstPaintTime,
+            '\ndom渲染完成时间:', domRenderTime, 
+            '\n页面onload时间:', loadTime);
+
+</code></pre></div></div> <div class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新: </span> <span class="time">2019-12-28 08:57:30</span></div></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/jrNoteWebsite/main/12basicCss.html" class="prev">
+          mycss note
+        </a></span> <span class="next"><a href="/jrNoteWebsite/main/16graphicDevelop.html">
+          可视化开发
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/jrNoteWebsite/assets/js/46.cf3e199e.js" defer></script><script src="/jrNoteWebsite/assets/js/app.ef52c15a.js" defer></script>
+  </body>
+</html>

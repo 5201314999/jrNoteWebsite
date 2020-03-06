@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>koa 请求参数接收 | jrNote</title>
+    <meta name="description" content="jr 笔记">
+    <link rel="icon" href="/jrNoteWebsite/favicon.ico">
+    
+    <link rel="preload" href="/jrNoteWebsite/assets/css/styles.ef52c15a.css" as="style"><link rel="preload" href="/jrNoteWebsite/assets/js/app.ef52c15a.js" as="script"><link rel="preload" href="/jrNoteWebsite/assets/js/58.79ae0eaa.js" as="script"><link rel="prefetch" href="/jrNoteWebsite/assets/css/1.styles.37672f4d.css"><link rel="prefetch" href="/jrNoteWebsite/assets/css/2.styles.56896ed6.css"><link rel="prefetch" href="/jrNoteWebsite/assets/css/3.styles.1e5b2a95.css"><link rel="prefetch" href="/jrNoteWebsite/assets/js/1.37672f4d.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/10.54d0b29b.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/11.507a45cf.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/12.9e788ba2.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/13.a4818e9d.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/14.227214e1.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/15.ddd3f6d7.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/16.279f83ed.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/17.2eeeaf73.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/18.cae9aa9d.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/19.106f0fae.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/2.56896ed6.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/20.94270539.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/21.18fb325d.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/22.60a98c3b.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/23.f0ae317a.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/24.e7900943.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/25.ed4e597b.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/26.46848f48.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/27.1cd75e6a.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/28.60882150.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/29.14caa5b4.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/3.1e5b2a95.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/30.5241ca98.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/31.923877bb.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/32.15c5b3d1.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/33.1cb52141.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/34.dda96f50.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/35.e7449be2.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/36.ceec2b74.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/37.59028316.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/38.5bb0eef8.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/39.357dec72.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/4.d15d075d.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/40.3b2545ff.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/41.3ec558a7.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/42.9be120e8.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/43.27e584be.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/44.85fab7e3.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/45.f005e7d1.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/46.cf3e199e.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/47.c33c5d66.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/48.1950445a.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/49.9929c7ea.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/5.f43ba467.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/50.e971cff8.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/51.27e59759.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/52.ef08a3c4.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/53.1fe88173.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/54.ecbcad41.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/55.c3d6deb4.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/56.6444e7e5.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/57.267d1ea3.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/59.8626850a.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/6.fb92c824.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/60.c40719a3.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/61.6b280eb8.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/62.99c63958.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/63.a325df46.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/64.9bf05a8f.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/65.ebee5489.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/66.04574448.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/67.de1d3124.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/68.b5719589.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/69.e92c9009.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/7.006cc73e.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/8.5013f130.js"><link rel="prefetch" href="/jrNoteWebsite/assets/js/9.e717d895.js">
+    <link rel="stylesheet" href="/jrNoteWebsite/assets/css/1.styles.37672f4d.css"><link rel="stylesheet" href="/jrNoteWebsite/assets/css/2.styles.56896ed6.css"><link rel="stylesheet" href="/jrNoteWebsite/assets/css/3.styles.1e5b2a95.css"><link rel="stylesheet" href="/jrNoteWebsite/assets/css/styles.ef52c15a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/jrNoteWebsite/" class="home-link router-link-active"><!----> <span class="site-name">jrNote</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/jrNoteWebsite/" class="nav-link">首页</a></div><div class="nav-item"><a href="/jrNoteWebsite/docs/" class="nav-link">储物柜</a></div><div class="nav-item"><a href="/jrNoteWebsite/frontend/" class="nav-link">复习</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/jrNoteWebsite/goal/goalList.html" class="nav-link">目标清单</a></li><li class="dropdown-item"><!----> <a href="/jrNoteWebsite/more/js/" class="nav-link">js知识</a></li><li class="dropdown-item"><!----> <a href="/jrNoteWebsite/goal/todoList.html" class="nav-link">todoList</a></li></ul></div></div><div class="nav-item"><a href="/jrNoteWebsite/about/" class="nav-link">关于</a></div><div class="nav-item"><a href="https://github.com/5201314999/jrNote" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/jrNoteWebsite/" class="nav-link">首页</a></div><div class="nav-item"><a href="/jrNoteWebsite/docs/" class="nav-link">储物柜</a></div><div class="nav-item"><a href="/jrNoteWebsite/frontend/" class="nav-link">复习</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/jrNoteWebsite/goal/goalList.html" class="nav-link">目标清单</a></li><li class="dropdown-item"><!----> <a href="/jrNoteWebsite/more/js/" class="nav-link">js知识</a></li><li class="dropdown-item"><!----> <a href="/jrNoteWebsite/goal/todoList.html" class="nav-link">todoList</a></li></ul></div></div><div class="nav-item"><a href="/jrNoteWebsite/about/" class="nav-link">关于</a></div><div class="nav-item"><a href="https://github.com/5201314999/jrNote" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/jrNoteWebsite/main/2git.html" class="sidebar-link">git 使用总结</a></li><li><a href="/jrNoteWebsite/main/1startKoa.html" class="sidebar-link">Koa2</a></li><li><a href="/jrNoteWebsite/main/7koaRouter.html" class="sidebar-link">koa-router路由中间件</a></li><li><a href="/jrNoteWebsite/main/8koaQuery.html" class="active sidebar-link">koa 请求参数接收</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/jrNoteWebsite/main/8koaQuery.html#前言" class="sidebar-link">前言</a></li><li class="sidebar-sub-header"><a href="/jrNoteWebsite/main/8koaQuery.html#get-请求" class="sidebar-link">get 请求</a></li><li class="sidebar-sub-header"><a href="/jrNoteWebsite/main/8koaQuery.html#post-请求" class="sidebar-link">post 请求</a></li><li class="sidebar-sub-header"><a href="/jrNoteWebsite/main/8koaQuery.html#借助中间件实现post-请求参数解析" class="sidebar-link">借助中间件实现post 请求参数解析</a></li></ul></li><li><a href="/jrNoteWebsite/main/9koaCookiesAndSession.html" class="sidebar-link">koa2 cookies，session</a></li><li><a href="/jrNoteWebsite/main/14koaMysql.html" class="sidebar-link">koa 连接数据库</a></li><li><a href="/jrNoteWebsite/main/3question.html" class="sidebar-link">问题集</a></li><li><a href="/jrNoteWebsite/main/4amazing.html" class="sidebar-link">前端细节优化积累</a></li><li><a href="/jrNoteWebsite/main/5wepy.html" class="sidebar-link">微信小程序开发入门笔记</a></li><li><a href="/jrNoteWebsite/main/6business.html" class="sidebar-link">后台系统业务总结</a></li><li><a href="/jrNoteWebsite/main/10architecture.html" class="sidebar-link">技术上，开发协作问题</a></li><li><a href="/jrNoteWebsite/main/11idea.html" class="sidebar-link">独立思考</a></li><li><a href="/jrNoteWebsite/main/12basicCss.html" class="sidebar-link">mycss note</a></li><li><a href="/jrNoteWebsite/main/15jscod.html" class="sidebar-link">js 基础代码(面试，平时都可以用)🚀</a></li><li><a href="/jrNoteWebsite/main/16graphicDevelop.html" class="sidebar-link">可视化开发</a></li><li><a href="/jrNoteWebsite/main/172019i.html" class="sidebar-link">2019</a></li><li><a href="/jrNoteWebsite/main/18interview.html" class="sidebar-link">面试系列2</a></li><li><a href="/jrNoteWebsite/main/19webrtc.html" class="sidebar-link">webrtc</a></li></ul> </div> <div class="page"> <div class="content"><h1 id="koa-请求参数接收"><a href="#koa-请求参数接收" aria-hidden="true" class="header-anchor">#</a> koa 请求参数接收</h1> <h2 id="前言"><a href="#前言" aria-hidden="true" class="header-anchor">#</a> 前言</h2> <p><strong>web 请求都类似，非常容易理解,不详细说明</strong></p> <p><code>注意</code>:  ctx.request 和 node request 不等同</p> <h2 id="get-请求"><a href="#get-请求" aria-hidden="true" class="header-anchor">#</a> get 请求</h2> <div class="language- extra-class"><pre class="language-text"><code>    /**
+ * Description 获取get 请求参数
+ * @authors fanjiongrong (fanjiongrong@tvflnet.com)
+ * @date    2018-11-15 11:27:06
+ * @version 1.0.0
+ */
+
+ const Koa=require('koa');
+
+ const app=new Koa();
+
+ app.use(async (ctx) =&gt;{
+     //从request 对象取
+     let url=ctx.url;
+     console.log(ctx.request);
+     let request=ctx.request;
+     let req_query=ctx.request.query;
+     let req_querystring=ctx.request.querystring;
+
+     //从上下文中取
+     let ctx_query=ctx.query;
+     let ctx_querystring=ctx.querystring;
+
+     ctx.body={
+         url,
+         req_query,
+         req_querystring,
+         ctx_query,
+         ctx_querystring
+     }
+ })
+
+
+ app.listen(3000);
+
+ console.log('[demo] is starting at port 3000');
+ console.log('http://localhost:3000');
+
+</code></pre></div><h2 id="post-请求"><a href="#post-请求" aria-hidden="true" class="header-anchor">#</a> post 请求</h2> <p>1 ctx.request 是 context 经过封装的对象， ct.req 是 node.js 请求对象。
+2 ctx.response ctx.res 同理
+3 由于 koa 本身没有封装获取 post 请求参数的代码，不借助第三方中间件，代码和 node.js 原生 post 请求一致</p> <div class="language- extra-class"><pre class="language-text"><code>  /**
+* Description 解析node 请求的post 参数
+* @authors fanjiongrong (fanjiongrong@tvflnet.com)
+* @date    2018-11-15 17:38:30
+* @version 1.0.0
+*/
+async function parsePostData(ctx) {
+return new Promise((resolve, reject) =&gt; {
+  try {
+    let postData = '';
+    // 通过req的data事件监听函数，每当接受到请求体的数据，就累加到post变量中
+    ctx.req.addListener('data', data =&gt; {
+      postData += data;
+      console.log(postData);
+    });
+    //结束后真正解析
+    ctx.req.addListener('end', () =&gt; {
+      let parsePostData = parseQueryStr(postData);
+      resolve(parsePostData);
+    });
+  } catch (err) {
+    reject(err);
+  }
+});
+}
+
+function parseQueryStr(queryStr) {
+let queryData = {};
+const queryStrList = queryStr.split('&amp;');
+console.log(queryStrList);
+for (let  queryStr of queryStrList) {
+  let itemList = queryStr.split('=');
+  queryData[itemList[0]] = decodeURIComponent(itemList[1]);
+}
+return queryData;
+}
+
+module.exports=parsePostData;
+
+</code></pre></div><h2 id="借助中间件实现post-请求参数解析"><a href="#借助中间件实现post-请求参数解析" aria-hidden="true" class="header-anchor">#</a> 借助中间件实现post 请求参数解析</h2> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * Description 使用中间件获取post 请求参数 koa-bodyparser 
+ * @authors fanjiongrong (fanjiongrong@tvflnet.com)
+ * @date    2018-11-15 18:38:58
+ * @version 1.0.0
+ */
+
+const Koa = require('koa');
+const bodyparser=require('koa-bodyparser');
+
+
+const app = new Koa();
+
+app.use(bodyparser());
+
+app.use(async ctx =&gt; {
+  if (ctx.url === '/' &amp;&amp; ctx.method === 'GET') {
+    // 当GET请求时候返回表单页面
+    let html = `
+          &lt;h1&gt;koa2 request post demo&lt;/h1&gt;
+          &lt;form method=&quot;POST&quot; action=&quot;/&quot;&gt;
+            &lt;p&gt;userName&lt;/p&gt;
+            &lt;input name=&quot;userName&quot; /&gt;&lt;br/&gt;
+            &lt;p&gt;nickName&lt;/p&gt;
+            &lt;input name=&quot;nickName&quot; /&gt;&lt;br/&gt;
+            &lt;p&gt;email&lt;/p&gt;
+            &lt;input name=&quot;email&quot; /&gt;&lt;br/&gt;
+            &lt;button type=&quot;submit&quot;&gt;submit&lt;/button&gt;
+          &lt;/form&gt;
+        `;
+    ctx.body = html;
+  } else if (ctx.url === '/' &amp;&amp; ctx.method === 'POST') {
+    // 当POST请求的时候，解析POST表单里的数据，并显示出来
+    let postData = ctx.request.body;
+    ctx.body = postData;
+  } else {
+    // 其他请求显示404
+    ctx.body = '&lt;h1&gt;404！！！ o(╯□╰)o&lt;/h1&gt;';
+  }
+});
+
+app.listen(3000, () =&gt; {
+  console.log('[demo] is starting at port 3000');
+  console.log('http://localhost:3000');
+});
+
+
+</code></pre></div></div> <div class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新: </span> <span class="time">2019-8-13 17:41:58</span></div></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/jrNoteWebsite/main/7koaRouter.html" class="prev">
+          koa-router路由中间件
+        </a></span> <span class="next"><a href="/jrNoteWebsite/main/9koaCookiesAndSession.html">
+          koa2 cookies，session
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/jrNoteWebsite/assets/js/58.79ae0eaa.js" defer></script><script src="/jrNoteWebsite/assets/js/app.ef52c15a.js" defer></script>
+  </body>
+</html>
